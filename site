@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Forma — Interior Design</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Top info bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <ul class="info-list">
+      <li><i class="ico">&#9742;</i> Toll Free: <strong>1800.899.900</strong></li>
+      <li><i class="ico">&#9993;</i> Email: <strong>hello@studioforma.com</strong></li>
+      <li><i class="ico">&#128337;</i> Mon–Fri: <strong>08:00–17:00</strong></li>
+    </ul>
+    <ul class="social-list">
+      <li><a href="#" aria-label="Facebook">f</a></li>
+      <li><a href="#" aria-label="Twitter">t</a></li>
+      <li><a href="#" aria-label="Instagram">ig</a></li>
+      <li><a href="#" aria-label="Dribbble">dr</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="#" class="logo">STUDIO<span>FORMA</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80')"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1600&q=80')"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <span class="hero-kicker">Our expertise for</span>
+    <h1 class="hero-title">Interior Design</h1>
+    <a href="#projects" class="btn btn-outline">Our Portfolio</a>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- Services -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head center">
+      <h2>What We Do</h2>
+      <span class="sep"><i></i></span>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 service-col">
+        <h3><strong>Residential</strong> Design</h3>
+        <p>Warm, functional homes shaped around the way you live. We handle layout, materials, lighting and styling from first sketch to final install.</p>
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80')"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 service-col">
+        <h3><strong>Office</strong> Design</h3>
+        <p>Workspaces that balance focus and collaboration. Acoustic planning, ergonomic furniture and brand-led finishes that people enjoy using.</p>
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80')"></div>
+      </div>
+      <div class="col-md-4 col-sm-6 service-col">
+        <h3><strong>Hospitality</strong> Design</h3>
+        <p>Hotels, cafés and restaurants with atmosphere you remember. Durable, guest-focused interiors that photograph beautifully and wear well.</p>
+        <div class="service-img" style="background-image:url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=800&q=80')"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Process -->
+<section class="section process-band" id="process">
+  <div class="container">
+    <div class="section-head center light">
+      <h2>Our Process</h2>
+      <span class="sep"><i></i></span>
+    </div>
+    <div class="process-tabs">
+      <ul class="process-nav" id="processNav">
+        <li class="active" data-tab="0">Meet &amp; Agree</li>
+        <li data-tab="1">Idea &amp; Concept</li>
+        <li data-tab="2">Design &amp; Create</li>
+        <li data-tab="3">Build &amp; Install</li>
+      </ul>
+      <div class="process-panels" id="processPanels">
+        <div class="panel active"><p>We start with a relaxed consultation to understand your space, budget and taste. You get a written brief and a clear fee proposal before anything begins — no surprises later.</p></div>
+        <div class="panel"><p>Mood boards, material samples and spatial sketches turn the brief into a direction. We refine two or three concepts with you until one feels unmistakably right.</p></div>
+        <div class="panel"><p>Detailed drawings, lighting plans, joinery and finish schedules are produced. We coordinate trades and suppliers so the build matches the drawings.</p></div>
+        <div class="panel"><p>On-site supervision through to snagging, furniture delivery and styling. We hand over a finished, photographed space ready to live or work in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-head center">
+      <h2>Selected Projects</h2>
+      <span class="sep"><i></i></span>
+    </div>
+    <ul class="filters" id="filters">
+      <li><a href="#" class="active" data-filter="all">All Projects</a></li>
+      <li><a href="#" data-filter="commercial">Commercial</a></li>
+      <li><a href="#" data-filter="hospitality">Hospitality</a></li>
+      <li><a href="#" data-filter="office">Office</a></li>
+      <li><a href="#" data-filter="residential">Residential</a></li>
+    </ul>
+    <div class="gallery" id="gallery">
+      <div class="gallery-item residential" data-cat="residential">
+        <a href="#"><span class="overlay"><span class="project-name">Eco Green Interior</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item hospitality" data-cat="hospitality">
+        <a href="#"><span class="overlay"><span class="project-name">Modern Elegance Suite</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item hospitality" data-cat="hospitality">
+        <a href="#"><span class="overlay"><span class="project-name">Apartment Renovation</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item office" data-cat="office">
+        <a href="#"><span class="overlay"><span class="project-name">Studio Workspace</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item commercial" data-cat="commercial">
+        <a href="#"><span class="overlay"><span class="project-name">Restaurant in Texas</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item residential" data-cat="residential">
+        <a href="#"><span class="overlay"><span class="project-name">Summer House</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item office" data-cat="office">
+        <a href="#"><span class="overlay"><span class="project-name">Office on Space</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+      <div class="gallery-item commercial" data-cat="commercial">
+        <a href="#"><span class="overlay"><span class="project-name">Boutique Retail</span></span>
+        <div class="gallery-img" style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80')"></div></a>
+      </div>
+    </div>
+    <div class="center cta-wrap">
+      <a href="#projects" class="btn btn-line">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonial-band" id="testimonials">
+  <div class="container">
+    <div class="section-head center light">
+      <h2>Customer Says</h2>
+      <span class="sep"><i></i></span>
+    </div>
+    <div class="testimonial-carousel" id="testimonialCarousel">
+      <div class="testimonial active">
+        <blockquote>
+          <p>They listened first and designed second. The finished flat feels calm, warm and completely ours — and it came in on budget.</p>
+          <div class="byline">James, Residential Client</div>
+        </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          <p>Our office fit-out was delivered over a weekend so the team never lost a day. Clever storage and much better light.</p>
+          <div class="byline">Patrick, Office Client</div>
+        </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          <p>The café redesign doubled our covers without losing the atmosphere regulars loved. Guests photograph the ceiling constantly.</p>
+          <div class="byline">Michael, Hospitality Client</div>
+        </blockquote>
+      </div>
+      <div class="testimonial">
+        <blockquote>
+          <p>Clear process, honest pricing, beautiful result. They handled trades and suppliers so we could carry on working.</p>
+          <div class="byline">John, Commercial Client</div>
+        </blockquote>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <a href="#" class="logo logo-footer">STUDIO<span>FORMA</span></a>
+        <p class="footer-about">Based in Brooklyn. Interior design for homes, workplaces and hospitality. We believe good rooms are built around the people who use them — not the other way round.</p>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h3>Latest News</h3>
+        <ul class="footer-links">
+          <li><a href="#">The 5 secrets to pulling off simple, minimal design</a></li>
+          <li><a href="#">9 unique and unusual ways to display your TV</a></li>
+          <li><a href="#">5 things that take a room from good to great</a></li>
+          <li><a href="#">Our favourite home decor trends of the year</a></li>
+          <li><a href="#">How to make a huge impact with multiples</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <h3>Contact Us</h3>
+        <address>
+          <span>100 Mainstreet Center, Brooklyn</span>
+          <span><strong>Phone:</strong> (208) 333 9296</span>
+          <span><strong>Fax:</strong> (208) 333 9298</span>
+          <span><strong>Email:</strong> <a href="mailto:hello@studioforma.com">hello@studioforma.com</a></span>
+          <span><strong>Web:</strong> <a href="#">studioforma.com</a></span>
+        </address>
+      </div>
+    </div>
+  </div>
+  <div class="subfooter">
+    <div class="container subfooter-inner">
+      <div>© Copyright 2026 — Studio Forma. All rights reserved.</div>
+      <div class="social-icons">
+        <ul>
+          <li><a href="#" aria-label="Facebook">f</a></li>
+          <li><a href="#" aria-label="Twitter">t</a></li>
+          <li><a href="#" aria-label="Instagram">ig</a></li>
+          <li><a href="#" aria-label="Dribbble">dr</a></li>
+          <li><a href="#" aria-label="RSS">rss</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
+
+<script src="script.js"></script>
+</body>
+</html>
