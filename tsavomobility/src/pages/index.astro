@@ -1,0 +1,70 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroSlider from '../components/HeroSlider.tsx';
+import ProcessTabs from '../components/ProcessTabs.tsx';
+import WorksFilter from '../components/WorksFilter.tsx';
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+const works = await getCollection('works');
+
+const processSteps = [
+  { title: 'Meet & Agree', content: 'We start with a relaxed consultation to understand your space, budget and taste. You get a written brief and a clear fee proposal before anything begins — no surprises later.' },
+  { title: 'Idea & Concept', content: 'Mood boards, material samples and spatial sketches turn the brief into a direction. We refine two or three concepts with you until one feels unmistakably right.' },
+  { title: 'Design & Create', content: 'Detailed drawings, lighting plans, joinery and finish schedules are produced. We coordinate trades and suppliers so the build matches the drawings.' },
+  { title: 'Build & Install', content: 'On-site supervision through to snagging, furniture delivery and styling. We hand over a finished, photographed space ready to live or work in.' }
+];
+
+const formattedWorks = works.map(w => ({
+  id: w.id,
+  title: w.data.title,
+  category: w.data.category,
+  image: w.data.image,
+  link: w.data.link,
+}));
+---
+
+<Layout title="Interior Design Studio">
+  <HeroSlider client:load />
+
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head center">
+        <h2>What We Do</h2>
+        <span class="sep"><i></i></span>
+      </div>
+      <div class="row">
+        {services.map((service) => (
+          <div class="col-md-4 col-sm-6 service-col">
+            <h3><strong>{service.data.title.split(' ')[0]}</strong> Design</h3>
+            <p>{service.data.description}</p>
+            <div class="service-img" style={`background-image:url('${service.data.image}')`}></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section process-band" id="process">
+    <div class="container">
+      <div class="section-head center light">
+        <h2>Our Process</h2>
+        <span class="sep"><i></i></span>
+      </div>
+      <ProcessTabs tabs={processSteps} client:visible />
+    </div>
+  </section>
+
+  <section class="section" id="works">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Selected Works</h2>
+        <span class="sep"><i></i></span>
+      </div>
+      <WorksFilter works={formattedWorks} client:visible />
+      <div class="center cta-wrap">
+        <a href="/works" class="btn btn-line">View All Works</a>
+      </div>
+    </div>
+  </section>
+</Layout>

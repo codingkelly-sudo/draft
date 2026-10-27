@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const services = await getCollection('services');
+---
+
+<Layout title="Our Services">
+  <section class="page-header">
+    <div class="container center">
+      <h1>Our Services</h1>
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> Our Services
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        {services.map((service) => (
+          <div class="col-md-6 service-card">
+            <h3><strong>{service.data.title.split(' ')[0]}</strong> Design</h3>
+            <p>{service.data.description}</p>
+            <div class="service-card-img" style={`background-image:url('${service.data.image}')`}></div>
+            <a href="#" class="btn btn-line">Read More</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="container center">
+      <h2>Ready to start your project?</h2>
+      <p style="color:#ccc; margin-bottom: 30px;">Get in touch with our team today for a consultation.</p>
+      <a href="/contact" class="btn btn-line">Get Quotation</a>
+    </div>
+  </section>
+</Layout>

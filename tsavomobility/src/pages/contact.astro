@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.tsx';
+---
+
+<Layout title="Contact Us">
+  <section class="page-header">
+    <div class="container center">
+      <h1>Contact Us</h1>
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> Contact Us
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Let's talk about your space.</h2>
+          <p style="color: #b0b0b0; margin-bottom: 30px;">Whether it's a single room refresh or a full commercial fit-out, we'd love to hear from you. Reach out to our Brooklyn studio.</p>
+          
+          <address class="contact-address">
+            <span><strong>Address:</strong> 100 Mainstreet Center, Brooklyn</span>
+            <span><strong>Phone:</strong> (208) 333 9296</span>
+            <span><strong>Email:</strong> <a href="mailto:hello@studioforma.com">hello@studioforma.com</a></span>
+            <span><strong>Hours:</strong> Mon–Fri, 08:00–17:00</span>
+          </address>
+        </div>
+
+        <div class="col-md-6">
+          <ContactForm client:load />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
