@@ -1,0 +1,40 @@
+{
+  "$ref": "#/definitions/works",
+  "definitions": {
+    "works": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "residential",
+            "office",
+            "hospitality",
+            "commercial"
+          ]
+        },
+        "image": {
+          "type": "string",
+          "format": "uri"
+        },
+        "link": {
+          "type": "string",
+          "default": "#"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "category",
+        "image"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
