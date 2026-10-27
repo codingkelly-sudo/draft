@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import WorksFilter from '../components/WorksFilter.tsx';
+import { getCollection } from 'astro:content';
+
+const works = await getCollection('works');
+
+const formattedWorks = works.map(w => ({
+  id: w.id,
+  title: w.data.title,
+  category: w.data.category,
+  image: w.data.image,
+  link: w.data.link,
+}));
+---
+
+<Layout title="Our Works">
+  <section class="page-header">
+    <div class="container center">
+      <h1>Our Works</h1>
+      <div class="breadcrumb">
+        <a href="/">Home</a> <span>/</span> Our Works
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <WorksFilter works={formattedWorks} client:visible />
+    </div>
+  </section>
+</Layout>
