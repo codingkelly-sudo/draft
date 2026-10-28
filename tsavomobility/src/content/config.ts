@@ -2,7 +2,7 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const services = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/data/services" }), // Changed path
+  loader: glob({ pattern: "**/*.json", base: "./src/data/services" }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -12,7 +12,7 @@ const services = defineCollection({
 });
 
 const works = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/data/works" }), // Changed path
+  loader: glob({ pattern: "**/*.json", base: "./src/data/works" }),
   schema: z.object({
     title: z.string(),
     category: z.enum(['residential', 'office', 'hospitality', 'commercial']),
@@ -22,7 +22,7 @@ const works = defineCollection({
 });
 
 const settings = defineCollection({
-  loader: glob({ pattern: "**/*.json", base: "./src/data/settings" }), // Changed path
+  loader: glob({ pattern: "**/*.json", base: "./src/data/settings" }),
   schema: z.object({
     phone: z.string(),
     email: z.string().email(),
