@@ -3,7 +3,4 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   integrations: [react()],
-  experimental: {
-    contentLayer: true
-  }
 });
